@@ -17,4 +17,5 @@
  * 添加一个聊天内容
  */
 - (void)insertOneChatContentMessage:(SDChatModel*)cm;
+
 @end
