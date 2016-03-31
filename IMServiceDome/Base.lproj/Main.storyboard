@@ -33,13 +33,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zj8-Zp-yTj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatcell" id="Io3-ce-5iN">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Io3-ce-5iN" id="DFv-RD-Rbc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Lyp-aX-0ND"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SbF-YD-OvZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zj8-Zp-yTj" secondAttribute="trailing" id="GfY-aM-LZD"/>
+                            <constraint firstItem="zj8-Zp-yTj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R5Y-nH-Cje"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zj8-Zp-yTj" secondAttribute="bottom" id="TxR-yB-2o3"/>
+                            <constraint firstItem="zj8-Zp-yTj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XHy-xw-oPa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Po-k1-H5E"/>
+                    <connections>
+                        <outlet property="theTableView" destination="zj8-Zp-yTj" id="Bzt-32-2nI"/>
+                        <segue destination="mdy-wr-FH2" kind="push" id="h3w-Na-zGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="5"/>
+            <point key="canvasLocation" x="217" y="5"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="bmM-dd-TpQ">
+            <objects>
+                <viewController storyboardIdentifier="chatconrtentstory" id="mdy-wr-FH2" customClass="SDChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ZF-GD-gxw"/>
+                        <viewControllerLayoutGuide type="bottom" id="d7L-Tp-uYA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Mh-e3-NvN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6b1-FJ-1Dp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XF-cd-FS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="5"/>
         </scene>
     </scenes>
 </document>

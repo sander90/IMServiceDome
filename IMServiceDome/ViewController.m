@@ -10,10 +10,14 @@
 
 #import <IMService/AbstractXMPPConnection.h>
 
-@interface ViewController ()<XmppConnectionDelegate>
+#import "SDChatViewController.h"
+
+@interface ViewController ()<XmppConnectionDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     
 }
+//chatcell
+@property (nonatomic, weak)IBOutlet UITableView * theTableView;
 @end
 
 @implementation ViewController
@@ -25,13 +29,15 @@
     [connect setDelegate:self];
     [connect connect];
     // Do any additional setup after loading the view, typically from a nib.
+    // 建立界面
+   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - XmppConnectionDelegate
 - (void)XMPPDidConnect
 {
     NSLog(@"did Connect");
@@ -39,6 +45,24 @@
 - (void)XMPPNotConnect
 {
     NSLog(@"not Connect");
+}
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+- (UITableViewCell * )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"chatcell"];
+    cell.textLabel.text = @"sander1";
+    return cell;
+}
+#pragma mark - UITableViewDelegate;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //chatconrtentstory
+    SDChatViewController *  cc = [self.storyboard instantiateViewControllerWithIdentifier:@"chatconrtentstory"];
+    [self.navigationController pushViewController:cc animated:true];
 }
 
 @end

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8D55925292FC33D85BBB50C603FE0812B7A8F0CE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "69077744F3D8035FDE1E0AF7605AF61FF53031DB" : 0,
+    "8D55925292FC33D85BBB50C603FE0812B7A8F0CE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "737D7302-E984-4AC9-81AC-C40B5D7429B3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "69077744F3D8035FDE1E0AF7605AF61FF53031DB" : "IMService\/",
+    "8D55925292FC33D85BBB50C603FE0812B7A8F0CE" : "IMServiceDome\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IMServiceDome",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IMServiceDome.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sander90\/IMService.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "69077744F3D8035FDE1E0AF7605AF61FF53031DB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sander90\/IMServiceDome.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8D55925292FC33D85BBB50C603FE0812B7A8F0CE"
+    }
+  ]
+}
