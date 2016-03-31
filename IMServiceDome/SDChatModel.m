@@ -39,7 +39,7 @@
     
     CGFloat maxwidthoFcontent = selfRect.size.width - 100;
     
-    CGFloat minHeihgtOFcontent = 35.0f;
+    CGFloat minHeihgtOFcontent = 50.0f;
     
     CGRect contentRect = [self.content boundingRectWithSize:CGSizeMake(maxwidthoFcontent, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     

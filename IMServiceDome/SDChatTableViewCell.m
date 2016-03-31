@@ -10,6 +10,15 @@
 
 #import "SDChatModel.h"
 
+#import "UserPortraitView.h"
+
+@interface SDChatTableViewCell ()
+{
+    
+}
+@property (nonatomic, strong)UserPortraitView * user_portraitView;
+@end
+
 @implementation SDChatTableViewCell
 
 - (void)awakeFromNib {
@@ -27,12 +36,35 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self buildingDefineChatContentView];
     }
     return self;
 }
+
+- (void)buildingDefineChatContentView
+{
+    _user_portraitView = [[UserPortraitView alloc] init];
+    [self addSubview:_user_portraitView];
+}
 - (void)buildingChatContent:(SDChatModel *)cm
 {
-    
+    _chatModel = cm;
+    if (self.chatModel.type == Chat_Friend) {
+        [self buildingLeftChatMessage];
+    }else{
+        [self buildingRightChatMessage];
+    }
+}
+
+- (void)buildingLeftChatMessage
+{
+    CGPoint centerPoint = CGPointMake(self.contentView.bounds.origin.x + self.user_portraitView.frame.size.width/2.0f + 10, self.contentView.bounds.origin.y + self.contentView.frame.size.height/2.0f);
+    self.user_portraitView.center = centerPoint;
+}
+- (void)buildingRightChatMessage
+{
+    CGPoint centerPoint = CGPointMake(self.contentView.bounds.origin.x + self.contentView.frame.size.width - self.user_portraitView.frame.size.width / 2.0f - 10, self.contentView.bounds.origin.y + self.contentView.frame.size.height/2.0f);
+    self.user_portraitView.center = centerPoint;
 }
 
 

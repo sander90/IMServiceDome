@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class SDChatModel;
+
 @interface SDChatTableViewCell : UITableViewCell
 
+@property (nonatomic,strong,readonly) SDChatModel * chatModel;
 
+/**
+ * 建立聊天内容的cell
+ */
 - (void)buildingChatContent:(SDChatModel *)cm;
+
+
+
 @end

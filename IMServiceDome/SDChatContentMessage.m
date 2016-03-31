@@ -57,7 +57,7 @@
     }
     NSInteger row = indexPath.row;
     SDChatModel * cm = self.chatMessageList[row];
-    cell.textLabel.text = cm.content;
+    [cell buildingChatContent:cm];
     return cell;
 }
 #pragma mark - UITableViewDelegate
