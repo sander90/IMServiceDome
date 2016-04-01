@@ -59,13 +59,7 @@
 #pragma mark－ 当虚拟键盘隐藏的时候改变界面的frame
 - (void)changeFrameWithKeyBoardHide
 {
-    [UIView animateWithDuration:0.1 animations:^{
-        self.frame = self.defineFrame;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            
-        }
-    }];
+    self.frame = self.defineFrame;
 }
 
 #pragma mark - UITableViewDataSource

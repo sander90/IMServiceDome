@@ -8,7 +8,7 @@
 
 #import "SDChatInputView.h"
 
-
+#import "Chat.h"
 
 @implementation SDChatInputView
 
@@ -33,8 +33,35 @@
     CGRect textframe = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     self.theInputTextField = [[UITextField alloc] initWithFrame:textframe];
     [self addSubview:self.theInputTextField];
+    self.theInputTextField.delegate = self;
     self.theInputTextField.placeholder = @"请输入";
+    self.theInputTextField.returnKeyType = UIReturnKeySend;
+    
 }
+
+- (void)setChat:(Chat *)chat
+{
+    _chat = chat;
+}
+
+- (void)onSendMessage
+{
+    NSString* message = self.theInputTextField.text;
+    
+    [self.chat sendMessage:message];
+}
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if ([string isEqualToString:@"\n"]) {
+        [textField resignFirstResponder];
+        
+        [self onSendMessage];
+        textField.text = @"";
+    }
+    return YES;
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

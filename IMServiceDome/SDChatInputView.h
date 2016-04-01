@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #define KheightOfChatInput 45.0
-@interface SDChatInputView : UIView
+
+@class Chat;
+@interface SDChatInputView : UIView<UITextFieldDelegate>
 
 @property (nonatomic, strong)UITextField * theInputTextField;
 
+@property (nonatomic, strong,readonly) Chat *chat;
+
+- (void)setChat:(Chat *)chat;
 @end
