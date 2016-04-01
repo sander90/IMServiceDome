@@ -76,6 +76,13 @@
         [chatMessage insertOneChatContentMessage:cm];
     }
 }
+
+- (void)XMPPdidSendMessage:(NSString *)message
+{
+    SDChatModel * cm = [[SDChatModel alloc] initWithContent:message andChatModel:Chat_Me];
+    [chatMessage insertOneChatContentMessage:cm];
+
+}
 #pragma mark - 注册键盘通知
 - (void)registerForKeyboardNotifications
 {

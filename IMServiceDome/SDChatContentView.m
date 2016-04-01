@@ -73,7 +73,8 @@
     CGFloat centerY = self.frame.size.height / 2.0f + self.frame.origin.y;
     self.center = CGPointMake(centerX, centerY);
     UIImage * rightImage = [UIImage imageNamed:kRightBackGroupImageViewName];
-    UIEdgeInsets edge = UIEdgeInsetsMake(KtopOfEdgeInsets_right, KleftOfEdgeInsets_right, KbottomOfEdgeInsets_right, KrightOfEdgeInsets_right);
+//    UIEdgeInsetsMake(<#CGFloat top#>, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
+    UIEdgeInsets edge = UIEdgeInsetsMake(rightImage.size.height/2.0f + 10 , rightImage.size.width/2.0f - 1, rightImage.size.height/2.0f - 5, rightImage.size.width/2.0f + 1);
     rightImage = [rightImage resizableImageWithCapInsets:edge];
     [self.thebackImageView setImage:rightImage];
 }
