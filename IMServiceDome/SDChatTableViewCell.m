@@ -12,11 +12,16 @@
 
 #import "UserPortraitView.h"
 
+#import "SDChatContentView.h"
+
 @interface SDChatTableViewCell ()
 {
     
 }
 @property (nonatomic, strong)UserPortraitView * user_portraitView;
+
+@property (nonatomic, strong)SDChatContentView * chatContentView;
+
 @end
 
 @implementation SDChatTableViewCell
@@ -44,7 +49,10 @@
 - (void)buildingDefineChatContentView
 {
     _user_portraitView = [[UserPortraitView alloc] init];
-    [self addSubview:_user_portraitView];
+//    [self addSubview:_user_portraitView];
+    
+    self.chatContentView = [[SDChatContentView alloc] init];
+    [self addSubview:self.chatContentView];
 }
 - (void)buildingChatContent:(SDChatModel *)cm
 {
@@ -54,6 +62,7 @@
     }else{
         [self buildingRightChatMessage];
     }
+    [self.chatContentView setupChatModel:cm];
 }
 
 - (void)buildingLeftChatMessage

@@ -18,13 +18,18 @@
     }
     return self;
 }
+- (void)setupChatModel:(SDChatModel *)cm
+{
+    [super setupChatModel:cm];
+}
 - (void)buildingLeftChatContentView
 {
+    [super buildingLeftChatContentView];
     
 }
 - (void)buildingRightChatContentView
 {
-    
+    [super buildingRightChatContentView];
 }
 
 /*

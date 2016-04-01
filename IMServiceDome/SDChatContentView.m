@@ -25,6 +25,11 @@
     self = [super init];
     if (self) {
         _chatModel = cm;
+        CGFloat widthOfchatContent = self.chatModel.widthOfContentMessage;
+        CGFloat heightOfchatContent = self.chatModel.heightOfCell ;
+        self.frame = CGRectMake(0, 0, widthOfchatContent, heightOfchatContent);
+        
+        self.thebackImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         
         if (cm.type == Chat_Friend) {
             [self buildingLeftChatContentView];
@@ -34,13 +39,46 @@
     }
     return self;
 }
+
+- (void)setupChatModel:(SDChatModel * )cm
+{
+    _chatModel = cm;
+    CGFloat widthOfchatContent = self.chatModel.widthOfContentMessage;
+    CGFloat heightOfchatContent = self.chatModel.heightOfCell ;
+    self.frame = CGRectMake(0, 0, widthOfchatContent, heightOfchatContent);
+    self.backgroundColor = [UIColor blackColor];
+    self.thebackImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    
+    [self.thebackImageView setBackgroundColor:[UIColor blueColor]];
+    [self addSubview:self.thebackImageView];
+    
+    if (cm.type == Chat_Friend) {
+        [self buildingLeftChatContentView];
+    }else{
+        [self buildingRightChatContentView];
+    }
+}
 - (void)buildingLeftChatContentView
 {
+    CGFloat centerX = KWidthOfPortraitAndSpacing + self.frame.size.width /2.0f;
+    CGFloat centerY = self.frame.size.height / 2.0f + self.frame.origin.y;
+    self.center = CGPointMake(centerX, centerY);
+    UIImage * leftImage = [UIImage imageNamed:kLeftBackGroupImageViewName];
+    UIEdgeInsets edge = UIEdgeInsetsMake(leftImage.size.height /2.0f + 10, leftImage.size.width /2.0f - 1, leftImage.size.height/2.0f - 5, leftImage.size.width/2.0f + 1);
+    leftImage = [leftImage resizableImageWithCapInsets:edge];
+    [self.thebackImageView setImage:leftImage];
     
 }
 - (void)buildingRightChatContentView
 {
-    
+    CGRect selfRect = [[UIScreen mainScreen] bounds];
+    CGFloat centerX = selfRect.size.width - KWidthOfPortraitAndSpacing - self.frame.size.width /2.0f;
+    CGFloat centerY = self.frame.size.height / 2.0f + self.frame.origin.y;
+    self.center = CGPointMake(centerX, centerY);
+    UIImage * rightImage = [UIImage imageNamed:kRightBackGroupImageViewName];
+    UIEdgeInsets edge = UIEdgeInsetsMake(KtopOfEdgeInsets_right, KleftOfEdgeInsets_right, KbottomOfEdgeInsets_right, KrightOfEdgeInsets_right);
+    rightImage = [rightImage resizableImageWithCapInsets:edge];
+    [self.thebackImageView setImage:rightImage];
 }
 
 /*

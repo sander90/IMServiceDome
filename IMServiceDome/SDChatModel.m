@@ -43,13 +43,13 @@
     
     CGRect contentRect = [self.content boundingRectWithSize:CGSizeMake(maxwidthoFcontent, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     
-    _heightOfCell = contentRect.size.height + 10;
+    _heightOfCell = contentRect.size.height + kHeightOfSpacing;
     
     if (_heightOfCell < minHeihgtOFcontent) {
         _heightOfCell = minHeihgtOFcontent;
     }
     
-    _widthOfContentMessage = contentRect.size.width + 10 ;
+    _widthOfContentMessage = contentRect.size.width + kWidthOfSpacing;
     
     if (_widthOfContentMessage > maxwidthoFcontent) {
         
