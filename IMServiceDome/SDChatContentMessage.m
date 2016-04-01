@@ -25,10 +25,12 @@
     }
     return self;
 }
+
 - (void)reloadChatContentTable
 {
     
 }
+
 - (void)insertOneChatContentMessage:(SDChatModel*)cm
 {
     [self.chatMessageList addObject:cm];
