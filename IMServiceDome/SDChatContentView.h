@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define KWidthOfPortraitAndSpacing 45.0f
 
 #define kLeftBackGroupImageViewName @"weChatBubble_Receiving_Solid"
 #define kRightBackGroupImageViewName @"weChatBubble_Sending_Solid"

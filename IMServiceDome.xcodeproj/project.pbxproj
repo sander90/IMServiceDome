@@ -29,6 +29,7 @@
 		C595DE1C1CACC45B007283BF /* SDChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE1B1CACC45B007283BF /* SDChatModel.m */; };
 		C595DE211CACD00B007283BF /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE201CACD00B007283BF /* SDChatViewController.m */; };
 		C595DE291CACFBDA007283BF /* UserPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE281CACFBDA007283BF /* UserPortraitView.m */; };
+		C595DE2F1CAE433B007283BF /* SDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE2E1CAE433B007283BF /* SDChatInputView.m */; };
 		C5C3FB3E1CAD584A00E61C63 /* SDChatContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FB3D1CAD584A00E61C63 /* SDChatContentView.m */; };
 		C5C3FB431CAD764D00E61C63 /* SDChatTextContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FB421CAD764D00E61C63 /* SDChatTextContentView.m */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,8 @@
 		C595DE201CACD00B007283BF /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
 		C595DE271CACFBDA007283BF /* UserPortraitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPortraitView.h; sourceTree = "<group>"; };
 		C595DE281CACFBDA007283BF /* UserPortraitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPortraitView.m; sourceTree = "<group>"; };
+		C595DE2D1CAE433B007283BF /* SDChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatInputView.h; sourceTree = "<group>"; };
+		C595DE2E1CAE433B007283BF /* SDChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatInputView.m; sourceTree = "<group>"; };
 		C5C3FB3C1CAD584A00E61C63 /* SDChatContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatContentView.h; sourceTree = "<group>"; };
 		C5C3FB3D1CAD584A00E61C63 /* SDChatContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatContentView.m; sourceTree = "<group>"; };
 		C5C3FB411CAD764C00E61C63 /* SDChatTextContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTextContentView.h; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				C5C3FB3D1CAD584A00E61C63 /* SDChatContentView.m */,
 				C5C3FB411CAD764C00E61C63 /* SDChatTextContentView.h */,
 				C5C3FB421CAD764D00E61C63 /* SDChatTextContentView.m */,
+				C595DE2D1CAE433B007283BF /* SDChatInputView.h */,
+				C595DE2E1CAE433B007283BF /* SDChatInputView.m */,
 			);
 			path = IMServiceDome;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				C595DE191CACC43D007283BF /* SDChatTableViewCell.m in Sources */,
 				C5302A9D1C96AEC00060C66B /* main.m in Sources */,
 				C595DE211CACD00B007283BF /* SDChatViewController.m in Sources */,
+				C595DE2F1CAE433B007283BF /* SDChatInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

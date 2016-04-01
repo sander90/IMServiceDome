@@ -7,6 +7,7 @@
 //
 
 #import "SDChatTextContentView.h"
+#import "SDChatModel.h"
 
 @implementation SDChatTextContentView
 
@@ -21,6 +22,15 @@
 - (void)setupChatModel:(SDChatModel *)cm
 {
     [super setupChatModel:cm];
+    
+    UIFont * font = [UIFont systemFontOfSize:kSIZEOFCONTENTFONT];
+    self.theTextlabel = [[UILabel alloc] init];
+    self.theTextlabel.frame = CGRectMake(kWidthOfSpacing - 10, kHeightOfSpacing/2.0f, cm.widthOfContentMessage - 20, cm.heightOfCell - kHeightOfSpacing);
+    self.theTextlabel.text = cm.content;
+    [self.theTextlabel setFont:font];
+    self.theTextlabel.numberOfLines = 0;
+    [self addSubview:self.theTextlabel];
+    
 }
 - (void)buildingLeftChatContentView
 {

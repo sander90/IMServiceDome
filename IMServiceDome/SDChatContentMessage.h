@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#define KheightToTopSpacingView 20.0
 @class SDChatModel;
 @interface SDChatContentMessage : UITableView<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, assign,readonly) CGRect defineFrame;
 
 @property (nonatomic, strong,readonly) NSMutableArray * chatMessageList;
 
@@ -18,4 +20,8 @@
  */
 - (void)insertOneChatContentMessage:(SDChatModel*)cm;
 
+
+- (void)changeFrameWithKeyBoardShow:(CGFloat)hight;
+
+- (void)changeFrameWithKeyBoardHide;
 @end

@@ -14,6 +14,8 @@
 
 #import "SDChatContentView.h"
 
+#import "SDChatTextContentView.h"
+
 @interface SDChatTableViewCell ()
 {
     
@@ -50,9 +52,7 @@
 {
     _user_portraitView = [[UserPortraitView alloc] init];
 //    [self addSubview:_user_portraitView];
-    
-    self.chatContentView = [[SDChatContentView alloc] init];
-    [self addSubview:self.chatContentView];
+
 }
 - (void)buildingChatContent:(SDChatModel *)cm
 {
@@ -62,6 +62,15 @@
     }else{
         [self buildingRightChatMessage];
     }
+    if (self.chatContentView) {
+        [self.chatContentView removeFromSuperview];
+        self.chatContentView = nil;
+    }
+    
+    self.chatContentView = [[SDChatTextContentView alloc] init];
+    
+    [self addSubview:self.chatContentView];
+    
     [self.chatContentView setupChatModel:cm];
 }
 

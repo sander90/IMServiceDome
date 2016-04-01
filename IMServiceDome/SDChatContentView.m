@@ -15,7 +15,6 @@
 {
     self = [super init];
     if (self) {
-        
     }
     return self;
 }
@@ -46,10 +45,8 @@
     CGFloat widthOfchatContent = self.chatModel.widthOfContentMessage;
     CGFloat heightOfchatContent = self.chatModel.heightOfCell ;
     self.frame = CGRectMake(0, 0, widthOfchatContent, heightOfchatContent);
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
     self.thebackImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    
-    [self.thebackImageView setBackgroundColor:[UIColor blueColor]];
     [self addSubview:self.thebackImageView];
     
     if (cm.type == Chat_Friend) {
