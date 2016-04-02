@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <IMService/IMService.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<IMServiceDelegate>
 
 @end
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     IMService * im = [IMService initService];
     
-    
+    im.delegate = self;
     return YES;
 }
 
@@ -45,5 +45,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+- (void)IMServiceDidReviceAllChatMessage:(NSString *)message from:(NSString* )fromName
+{
+    NSLog(@"收到外部信息");
+}
 @end
