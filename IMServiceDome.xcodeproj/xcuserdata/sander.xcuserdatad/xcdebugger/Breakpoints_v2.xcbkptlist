@@ -92,11 +92,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../IMService/IMService/IMService.m"
-            timestampString = "481276214.463468"
+            timestampString = "481296629.952608"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-IMServicedidReceiveMessage:from:"
             landmarkType = "5">
          </BreakpointContent>

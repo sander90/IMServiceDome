@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUL-jg-CHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-153" y="5"/>
+            <point key="canvasLocation" x="-649" y="-31"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -65,11 +65,31 @@
                     <connections>
                         <outlet property="theTableView" destination="zj8-Zp-yTj" id="Bzt-32-2nI"/>
                         <segue destination="mdy-wr-FH2" kind="push" id="h3w-Na-zGs"/>
+                        <segue destination="j4z-6w-3o4" kind="push" id="dvP-Bz-aDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="5"/>
+            <point key="canvasLocation" x="-115" y="-31"/>
+        </scene>
+        <!--Room Chat View Controller-->
+        <scene sceneID="3OE-ZB-LYN">
+            <objects>
+                <viewController storyboardIdentifier="roomchatstory" id="j4z-6w-3o4" customClass="SDRoomChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dbQ-s7-CKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="nMt-Za-QKa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EZE-hS-UAf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Tj-rZ-A9x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grj-LX-Tmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="236"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="bmM-dd-TpQ">
@@ -88,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XF-cd-FS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="5"/>
+            <point key="canvasLocation" x="727" y="-543"/>
         </scene>
     </scenes>
 </document>

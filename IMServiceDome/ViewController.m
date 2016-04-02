@@ -12,11 +12,13 @@
 
 #import "SDChatViewController.h"
 
+#import "SDRoomChatViewController.h"
+
 #import <IMService/IMService.h>
 
 @interface ViewController ()<XmppConnectionDelegate,UITableViewDelegate,UITableViewDataSource>
 {
-    
+    NSArray * list;
 }
 //chatcell
 @property (nonatomic, weak)IBOutlet UITableView * theTableView;
@@ -27,9 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AbstractXMPPConnection* connect = [[AbstractXMPPConnection alloc] initWithName:@"truman" andPassword:@"123456" andServiceName:@"117.158.46.13"];
+    AbstractXMPPConnection* connect = [[AbstractXMPPConnection alloc] initWithName:@"sander" andPassword:@"123456" andServiceName:@"117.158.46.13"];
     [connect setDelegate:self];
     [connect connect];
+    
+    list = @[@"sander1",@"请求添加好友",@"聊天室"];
     // Do any additional setup after loading the view, typically from a nib.
     // 建立界面
    
@@ -51,12 +55,14 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return list.count;
 }
 - (UITableViewCell * )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"chatcell"];
-    cell.textLabel.text = @"sander1";
+    NSString* string = list[indexPath.row];
+    cell.textLabel.text = string;
+    
     return cell;
 }
 #pragma mark - UITableViewDelegate;
@@ -67,10 +73,13 @@
     if (row == 0) {
         SDChatViewController *  cc = [self.storyboard instantiateViewControllerWithIdentifier:@"chatconrtentstory"];
         [self.navigationController pushViewController:cc animated:true];
-    }else{
+    }else if (row == 1){
         IMService * ims = [IMService initService];
         
-        [ims addOneFriendWithFriendName:@"sander1"];
+        [ims addOneFriendWithFriendName:@"truman"];
+    }else if (row == 2){
+        SDRoomChatViewController * roomChat = [self.storyboard instantiateViewControllerWithIdentifier:@"roomchatstory"];
+        [self.navigationController pushViewController:roomChat animated:true];
     }
     
 }
