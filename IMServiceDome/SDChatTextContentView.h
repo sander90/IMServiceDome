@@ -11,4 +11,6 @@
 
 @interface SDChatTextContentView : SDChatContentView
 
+@property (nonatomic,strong) UILabel * theTextlabel;
+
 @end

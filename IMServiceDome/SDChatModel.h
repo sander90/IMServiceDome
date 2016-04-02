@@ -16,6 +16,13 @@ typedef enum {
 
 #define kSIZEOFCONTENTFONT 17
 
+#define kHeightOfSpacing 5
+
+#define kWidthOfSpacing 25.0
+
+#define KWidthOfPortraitAndSpacing 45.0f
+
+
 @interface SDChatModel : NSObject
 /**
  * 区分是我的内容，还是朋友的内容

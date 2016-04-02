@@ -12,11 +12,18 @@
 
 #import "UserPortraitView.h"
 
+#import "SDChatContentView.h"
+
+#import "SDChatTextContentView.h"
+
 @interface SDChatTableViewCell ()
 {
     
 }
 @property (nonatomic, strong)UserPortraitView * user_portraitView;
+
+@property (nonatomic, strong)SDChatContentView * chatContentView;
+
 @end
 
 @implementation SDChatTableViewCell
@@ -40,11 +47,11 @@
     }
     return self;
 }
-
 - (void)buildingDefineChatContentView
 {
     _user_portraitView = [[UserPortraitView alloc] init];
     [self addSubview:_user_portraitView];
+
 }
 - (void)buildingChatContent:(SDChatModel *)cm
 {
@@ -54,6 +61,16 @@
     }else{
         [self buildingRightChatMessage];
     }
+    if (self.chatContentView) {
+        [self.chatContentView removeFromSuperview];
+        self.chatContentView = nil;
+    }
+    
+    self.chatContentView = [[SDChatTextContentView alloc] init];
+    
+    [self addSubview:self.chatContentView];
+    
+    [self.chatContentView setupChatModel:cm];
 }
 
 - (void)buildingLeftChatMessage
@@ -63,7 +80,9 @@
 }
 - (void)buildingRightChatMessage
 {
-    CGPoint centerPoint = CGPointMake(self.contentView.bounds.origin.x + self.contentView.frame.size.width - self.user_portraitView.frame.size.width / 2.0f - 10, self.contentView.bounds.origin.y + self.contentView.frame.size.height/2.0f);
+    
+    CGRect selfrect = [[UIScreen mainScreen] bounds];
+    CGPoint centerPoint = CGPointMake(self.contentView.bounds.origin.x + selfrect.size.width - self.user_portraitView.frame.size.width / 2.0f - 10, self.contentView.bounds.origin.y + self.contentView.frame.size.height/2.0f);
     self.user_portraitView.center = centerPoint;
 }
 
