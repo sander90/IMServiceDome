@@ -12,6 +12,8 @@
 
 #import "SDChatViewController.h"
 
+#import <IMService/IMService.h>
+
 @interface ViewController ()<XmppConnectionDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     
@@ -25,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AbstractXMPPConnection* connect = [[AbstractXMPPConnection alloc] initWithName:@"sander" andPassword:@"123456" andServiceName:@"117.158.46.13"];
+    AbstractXMPPConnection* connect = [[AbstractXMPPConnection alloc] initWithName:@"truman" andPassword:@"123456" andServiceName:@"117.158.46.13"];
     [connect setDelegate:self];
     [connect connect];
     // Do any additional setup after loading the view, typically from a nib.
@@ -49,7 +51,7 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 - (UITableViewCell * )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -61,8 +63,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //chatconrtentstory
-    SDChatViewController *  cc = [self.storyboard instantiateViewControllerWithIdentifier:@"chatconrtentstory"];
-    [self.navigationController pushViewController:cc animated:true];
+    NSInteger row = indexPath.row;
+    if (row == 0) {
+        SDChatViewController *  cc = [self.storyboard instantiateViewControllerWithIdentifier:@"chatconrtentstory"];
+        [self.navigationController pushViewController:cc animated:true];
+    }else{
+        IMService * ims = [IMService initService];
+        
+        [ims addOneFriendWithFriendName:@"sander1"];
+    }
+    
 }
 
 @end
