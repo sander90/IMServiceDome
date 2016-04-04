@@ -46,7 +46,8 @@
     roomChat.delegate = self;
     
 //    [roomChat CheckIMServiceIsSupportMUC];
-    [roomChat fetchRoomChat];
+//    [roomChat fetchRoomChat];
+    [roomChat createRetentionRoomWithRoomname:@"room2" andnickName:@"sander"];
     
 }
 #pragma mark - 建立聊天的记录的界面

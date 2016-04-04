@@ -33,7 +33,7 @@
     [connect setDelegate:self];
     [connect connect];
     
-    list = @[@"sander1",@"请求添加好友",@"聊天室"];
+    list = @[@"sander1",@"请求添加好友",@"聊天室",@"list"];
     // Do any additional setup after loading the view, typically from a nib.
     // 建立界面
    
@@ -80,6 +80,9 @@
     }else if (row == 2){
         SDRoomChatViewController * roomChat = [self.storyboard instantiateViewControllerWithIdentifier:@"roomchatstory"];
         [self.navigationController pushViewController:roomChat animated:true];
+    }else if (row == 3){
+        IMService * im = [IMService initService];
+        [im fetchRoomChatList];
     }
     
 }
