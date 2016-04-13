@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-#define kLeftBackGroupImageViewName @"weChatBubble_Receiving_Solid"
-#define kRightBackGroupImageViewName @"weChatBubble_Sending_Solid"
+#define kLeftBackGroupImageViewName @"bg_msg_gray"
+#define kRightBackGroupImageViewName @"bg_msg_green"
 
 #define KtopOfEdgeInsets_left 10
 

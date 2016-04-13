@@ -92,12 +92,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../IMService/IMService/IMService.m"
-            timestampString = "481536021.799117"
+            timestampString = "482051769.202937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "-SDFaildConnectXMPPStream:andError:"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "-createRetentionRoomWithroomname:andNickname:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../IMService/IMService/RoomChat.m"
+            timestampString = "482051769.202937"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-xmppRoomDidCreate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -48,9 +48,9 @@
     
 //    [roomChat CheckIMServiceIsSupportMUC];
 //    [roomChat fetchRoomChat];
-    [roomChat createRetentionRoomWithRoomname:@"room_dsfdsfsdafded" andnickName:@"sander"];
+    [roomChat createRetentionRoomWithRoomname:@"54182ff3-3bde-42bb-9d17-e91bcd2c2689" andnickName:@"sander"];
     
-    [roomChat getChatRoomConfigurationInformation];
+//    [roomChat getChatRoomConfigurationInformation];
 //    IMService * im = [IMService initService];
 //    [im getConfigurationInformationForallWithRoom:@"room_dsfdsfsda"];
 //    

@@ -35,14 +35,14 @@
 - (void)buildingLeftChatContentView
 {
     [super buildingLeftChatContentView];
-    self.theTextlabel.frame = CGRectMake(kWidthOfSpacing - 10, kHeightOfSpacing/2.0f, self.chatModel.widthOfContentMessage - 20, self.chatModel.heightOfCell - kHeightOfSpacing);
+    self.theTextlabel.frame = CGRectMake(kWidthOfSpacing - 10, kHeightOfSpacing/3.0f, self.chatModel.widthOfContentMessage - 30, self.chatModel.heightOfCell - kHeightOfSpacing);
 
 }
 - (void)buildingRightChatContentView
 {
     [super buildingRightChatContentView];
     
-    self.theTextlabel.frame = CGRectMake(7, kHeightOfSpacing/2.0f, self.chatModel.widthOfContentMessage - 20, self.chatModel.heightOfCell - kHeightOfSpacing);
+    self.theTextlabel.frame = CGRectMake(7, kHeightOfSpacing/3.0f, self.chatModel.widthOfContentMessage - 30, self.chatModel.heightOfCell - kHeightOfSpacing);
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "SDChatInputView.h"
 
 #import "Chat.h"
+#import "RoomChat.h"
 
 @implementation SDChatInputView
 
@@ -47,8 +48,13 @@
 - (void)onSendMessage
 {
     NSString* message = self.theInputTextField.text;
-    
-    [self.chat sendMessage:message];
+    if ([self.chat isKindOfClass:[RoomChat class]]) {
+        RoomChat * rc = (RoomChat*)self.chat;
+        [rc sendRoomMessage:message];
+    }else{
+        [self.chat sendMessage:message];
+
+    }
 }
 #pragma mark - UITextFieldDelegate
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{

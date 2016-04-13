@@ -50,7 +50,7 @@
 - (void)buildingDefineChatContentView
 {
     _user_portraitView = [[UserPortraitView alloc] init];
-    [self addSubview:_user_portraitView];
+//    [self addSubview:_user_portraitView];
 
 }
 - (void)buildingChatContent:(SDChatModel *)cm
