@@ -37,7 +37,7 @@
     
     CGRect selfRect = [[UIScreen mainScreen] bounds];
     
-    CGFloat maxwidthoFcontent = selfRect.size.width - KWidthOfPortraitAndSpacing;
+    CGFloat maxwidthoFcontent = selfRect.size.width - KWidthOfPortraitAndSpacing - 20;
     
     CGFloat minHeihgtOFcontent = 40.0f;
     

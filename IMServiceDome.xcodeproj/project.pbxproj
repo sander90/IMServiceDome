@@ -33,6 +33,7 @@
 		C595DE821CAFF3FA007283BF /* SDRoomChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE811CAFF3FA007283BF /* SDRoomChatViewController.m */; };
 		C5C3FB3E1CAD584A00E61C63 /* SDChatContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FB3D1CAD584A00E61C63 /* SDChatContentView.m */; };
 		C5C3FB431CAD764D00E61C63 /* SDChatTextContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C3FB421CAD764D00E61C63 /* SDChatTextContentView.m */; };
+		C5EAEF941CCA9B8A0017F9FC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAEF931CCA9B8A0017F9FC /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		C5C3FB3D1CAD584A00E61C63 /* SDChatContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatContentView.m; sourceTree = "<group>"; };
 		C5C3FB411CAD764C00E61C63 /* SDChatTextContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTextContentView.h; sourceTree = "<group>"; };
 		C5C3FB421CAD764D00E61C63 /* SDChatTextContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatTextContentView.m; sourceTree = "<group>"; };
+		C5EAEF931CCA9B8A0017F9FC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EAEF941CCA9B8A0017F9FC /* libsqlite3.tbd in Frameworks */,
 				C503F2651C9A5DFA00421865 /* libresolv.9.dylib in Frameworks */,
 				C503F2631C9A5DDB00421865 /* libxml2.2.dylib in Frameworks */,
 				C503F2611C9A5DAB00421865 /* CFNetwork.framework in Frameworks */,
@@ -151,6 +154,7 @@
 		C5302A8F1C96AEC00060C66B = {
 			isa = PBXGroup;
 			children = (
+				C5EAEF931CCA9B8A0017F9FC /* libsqlite3.tbd */,
 				C503F2641C9A5DFA00421865 /* libresolv.9.dylib */,
 				C503F2621C9A5DDB00421865 /* libxml2.2.dylib */,
 				C503F25B1C9A55AC00421865 /* Foundation.framework */,

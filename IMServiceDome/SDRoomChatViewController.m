@@ -12,6 +12,7 @@
 #import <IMService/RoomChat.h>
 #import "SDChatModel.h"
 #import "SDChatInputView.h"
+#import <IMService/IMService.h>
 
 @interface SDRoomChatViewController ()<ChatDelegate>
 {
@@ -45,10 +46,7 @@
     roomChat = [[RoomChat alloc] init];
     roomChat.delegate = self;
     
-//    [roomChat CheckIMServiceIsSupportMUC];
-//    [roomChat fetchRoomChat];
-    [roomChat createRetentionRoomWithRoomname:@"room2" andnickName:@"sander"];
-    
+    [roomChat createRetentionRoomWithRoomname:@"afc941dd-aa77-4890-927b-2a572d9d06d5" andnickName:@"sander"];
 }
 #pragma mark - 建立聊天的记录的界面
 - (void)setChatContentView

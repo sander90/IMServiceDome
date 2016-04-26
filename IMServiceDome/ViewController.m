@@ -75,14 +75,20 @@
         [self.navigationController pushViewController:cc animated:true];
     }else if (row == 1){
         IMService * ims = [IMService initService];
-        
-        [ims addOneFriendWithFriendName:@"truman"];
+        [ims queryRosterandResult:^(id data) {
+            NSLog(@"%@",data);
+        }];
+//        [ims addOneFriendWithFriendName:@"truman"];
     }else if (row == 2){
         SDRoomChatViewController * roomChat = [self.storyboard instantiateViewControllerWithIdentifier:@"roomchatstory"];
         [self.navigationController pushViewController:roomChat animated:true];
     }else if (row == 3){
         IMService * im = [IMService initService];
-        [im fetchRoomChatList];
+        [im fetchRoomChatListWithFinishReslut:^(id data) {
+            NSArray * items = data;
+            NSLog(@"%@",items);
+        }];
+        
     }
     
 }

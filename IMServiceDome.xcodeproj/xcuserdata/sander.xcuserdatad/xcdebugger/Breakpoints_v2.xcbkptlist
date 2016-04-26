@@ -44,11 +44,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../IMService/IMService/SDXMPP.m"
-            timestampString = "480084379.671116"
+            timestampString = "483024675.426621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-getXMPPStream"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../IMService/IMService/SDXMPP.m"
+            timestampString = "483024675.426621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "-setupXmpp"
             landmarkType = "5">
          </BreakpointContent>
@@ -60,28 +76,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../IMService/IMService/SDXMPP.m"
-            timestampString = "480089612.101511"
+            timestampString = "483024675.426621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "@implementation SDXMPP"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../IMService/IMService/SDXMPP.m"
-            timestampString = "480089612.101511"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-goOnline"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-setupXmpp"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -92,12 +92,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../IMService/IMService/IMService.m"
-            timestampString = "481381850.95239"
+            timestampString = "483039293.269503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "-IMServicedidReceiveMessage:from:"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-createRetentionRoomWithroomname:andNickname:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -107,13 +107,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../IMService/IMService/IMService.m"
-            timestampString = "481431346.783751"
+            filePath = "../IMService/IMService/RoomChat.m"
+            timestampString = "482051769.202937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "-analysisReceviewIQByTypeisResult:"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-xmppRoomDidCreate:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../IMService/IMService/SDXMPP.m"
+            timestampString = "483039293.269503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "363"
+            endingLineNumber = "363"
+            landmarkName = "-xmppStream:didReceiveMessage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
