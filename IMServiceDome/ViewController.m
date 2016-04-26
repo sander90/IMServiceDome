@@ -16,6 +16,8 @@
 
 #import <IMService/IMService.h>
 
+#import <IMService/ChatDBManager.h>
+
 @interface ViewController ()<XmppConnectionDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSArray * list;
