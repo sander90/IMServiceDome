@@ -16,6 +16,8 @@
 
 #import <IMService/IMService.h>
 
+#import <IMService/ChatDBManager.h>
+
 @interface ViewController ()<XmppConnectionDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSArray * list;
@@ -36,7 +38,9 @@
     list = @[@"sander1",@"请求添加好友",@"聊天室",@"list"];
     // Do any additional setup after loading the view, typically from a nib.
     // 建立界面
-   
+    
+    ChatDBManager *cm = [ChatDBManager defineDBManager];
+    
 }
 
 - (void)didReceiveMemoryWarning {

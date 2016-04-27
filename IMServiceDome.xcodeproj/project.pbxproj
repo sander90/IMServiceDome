@@ -24,6 +24,7 @@
 		C5302AB61C96AEC00060C66B /* IMServiceDomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5302AB51C96AEC00060C66B /* IMServiceDomeTests.m */; };
 		C5302AC11C96AEC00060C66B /* IMServiceDomeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5302AC01C96AEC00060C66B /* IMServiceDomeUITests.m */; };
 		C5302AE21C96B2420060C66B /* libIMService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5302ADF1C96B2270060C66B /* libIMService.a */; };
+		C55D1A6C1CCF5AA700811F4C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C55D1A6B1CCF5AA700811F4C /* libsqlite3.dylib */; };
 		C595DE161CACC366007283BF /* SDChatContentMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE151CACC366007283BF /* SDChatContentMessage.m */; };
 		C595DE191CACC43D007283BF /* SDChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE181CACC43D007283BF /* SDChatTableViewCell.m */; };
 		C595DE1C1CACC45B007283BF /* SDChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C595DE1B1CACC45B007283BF /* SDChatModel.m */; };
@@ -95,6 +96,7 @@
 		C5302AC01C96AEC00060C66B /* IMServiceDomeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMServiceDomeUITests.m; sourceTree = "<group>"; };
 		C5302AC21C96AEC00060C66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5302ADA1C96B2270060C66B /* IMService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IMService.xcodeproj; path = ../../IMService/IMService.xcodeproj; sourceTree = "<group>"; };
+		C55D1A6B1CCF5AA700811F4C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		C595DE141CACC366007283BF /* SDChatContentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatContentMessage.h; sourceTree = "<group>"; };
 		C595DE151CACC366007283BF /* SDChatContentMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatContentMessage.m; sourceTree = "<group>"; };
 		C595DE171CACC43D007283BF /* SDChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTableViewCell.h; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5EAEF941CCA9B8A0017F9FC /* libsqlite3.tbd in Frameworks */,
+				C55D1A6C1CCF5AA700811F4C /* libsqlite3.dylib in Frameworks */,
 				C503F2651C9A5DFA00421865 /* libresolv.9.dylib in Frameworks */,
 				C503F2631C9A5DDB00421865 /* libxml2.2.dylib in Frameworks */,
 				C503F2611C9A5DAB00421865 /* CFNetwork.framework in Frameworks */,
@@ -154,7 +156,7 @@
 		C5302A8F1C96AEC00060C66B = {
 			isa = PBXGroup;
 			children = (
-				C5EAEF931CCA9B8A0017F9FC /* libsqlite3.tbd */,
+				C55D1A6B1CCF5AA700811F4C /* libsqlite3.dylib */,
 				C503F2641C9A5DFA00421865 /* libresolv.9.dylib */,
 				C503F2621C9A5DDB00421865 /* libxml2.2.dylib */,
 				C503F25B1C9A55AC00421865 /* Foundation.framework */,

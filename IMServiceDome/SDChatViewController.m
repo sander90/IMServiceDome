@@ -11,6 +11,9 @@
 #import <IMService/Chat.h>
 #import "SDChatModel.h"
 #import "SDChatInputView.h"
+#import <IMService/ChatDBManager.h>
+#import <IMService/ChatContentModel.h>
+
 
 @interface SDChatViewController ()<ChatDelegate>{
     SDChatContentMessage * chatMessage;
@@ -32,6 +35,8 @@
     [self setInputChatView];
     
     [self registerForKeyboardNotifications];
+    
+    [self initChatContentData];
     // Do any additional setup after loading the view.
 }
 #pragma mark - 建立聊天的服务
@@ -59,6 +64,24 @@
     [self.view addSubview:inputChatView];
     [inputChatView setChat:chat];
     inputChatView.backgroundColor = [UIColor blueColor];
+}
+
+- (void)initChatContentData
+{
+    ChatDBManager * cm = [ChatDBManager defineDBManager];
+    NSArray * list = [cm fetchChatContentWithChatID:self.friendname];
+    __weak typeof(self) weak_self = self;
+    [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        ChatContentModel * one = obj;
+        if ([one.friendname isEqualToString:self.friendname]) {
+            SDChatModel * cm = [[SDChatModel alloc] initWithContent:one.chatContent andChatModel:Chat_Friend];
+            [chatMessage.chatMessageList addObject:cm];
+        }else{
+            SDChatModel * cm = [[SDChatModel alloc] initWithContent:one.chatContent andChatModel:Chat_Me];
+            [chatMessage.chatMessageList addObject:cm];
+        }
+    }];
+    [chatMessage reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
